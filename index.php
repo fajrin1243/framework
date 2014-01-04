@@ -5,10 +5,6 @@
 	<title>Index</title>
 </head>
 <body>
-	<?php 
-
-	echo "Everything start here";
-
-	?>
+	<b> Github </b>
 </body>
 </html>
