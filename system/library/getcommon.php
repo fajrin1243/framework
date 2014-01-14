@@ -26,7 +26,7 @@ class getcommon {
 		{
 			$cookie = (array) $cookie;
 		}
-	
+
 		foreach($cookie as $key=>$val)
 		{
 			setcookie($key,$val);
@@ -45,18 +45,21 @@ class getcommon {
 	public static function sessionExpired()
 	{	
 		$rows = self::$model->query("SELECT * FROM session","array");
-		foreach($rows as $row)
+		if(!empty($rows))
 		{
-			$now = strtotime(date("Y-m-d H:i:s"));
-			$expired = strtotime($row->date."+1 minutes");
-			
-			if($now > $expired)
+			foreach($rows as $row)
 			{
-				self::$model->query("DELETE FROM session WHERE session_id='".$row->session_id."'");
+				$now = strtotime(date("Y-m-d H:i:s"));
+				$expired = strtotime($row->date."+1 minutes");
+
+				if($now > $expired)
+				{
+					self::$model->query("DELETE FROM session WHERE session_id='".$row->session_id."'");
+				}
 			}
-		}
 		//echo strtotime(date("Y-m-d H:i:s"));
 		//echo " dan ".strtotime(self::get("date")."+1 day");
+		}
 	}
 
 	public static function sessionStart()
@@ -65,25 +68,25 @@ class getcommon {
 		{
 			session_start();
 			self::$sessionStart = 1;
-			
+
 		}
 	}
-	
+
 	public static function sessionSetDB($data="")
 	{	
 		self::sessionStart();
 		$session_id = session_id();
-		
+
 		self::$model = framework::get("system/core/model");
-		
+
 		$session_db = framework::config("session_db");
 		$session_table = framework::config("session_table");
 		$user_agent = implode(";",getutility::userAgent());
-		
+
 		if((!empty($session_db)) && (!empty($session_table)))
 		{
 			$is_exist = self::$model->get("session",array("session_id"=>$session_id));
-		
+
 			if(empty($is_exist->session_id))
 			{
 				self::$model->query("INSERT INTO ".$session_table." VALUES ('".$session_id."','".$user_agent."','".$data."','".date("Y-m-d H:i:s")."')");
@@ -94,20 +97,20 @@ class getcommon {
 			}
 		}
 	}
-	
+
 	public static function sessionUnsetDB($data="")
 	{	
 		self::sessionStart();
 		$session_id = session_id();
-		
+
 		$session_db = framework::config("session_db");
 		$session_table = framework::config("session_table");
 		$user_agent = implode(";",getutility::userAgent());
-		
+
 		if((!empty($session_db)) && (!empty($session_table)))
 		{
 			$is_exist = self::$model->get("session",array("session_id"=>$session_id));
-		
+
 			if(!empty($is_exist->session_id))
 			{
 				if(!empty($data))
@@ -123,15 +126,15 @@ class getcommon {
 			}
 		}
 	}
-	
+
 	public static function sessionDestroy($session="")
 	{
 		self::sessionStart();
-		
+
 		if(!empty($session))
 		{
 			$session = (array) $session;
-			
+
 			foreach($session as $data)
 			{
 				self::sessionUnsetDB($data);
@@ -146,36 +149,36 @@ class getcommon {
 			session_destroy();
 		}
 	}
-	
+
 	public static function setSession($session)
 	{
 		self::sessionStart();
-		
+
 		if(!is_array($session))
 		{	
 			$session = (array) $session;
 		}
-		
+
 		foreach($session as $key=>$val)
 		{
 			$_SESSION[$key] = getutility::encrypt($val);
 		}
-		
+
 		self::sessionSetDB(json_encode($_SESSION));
 		//session_encode();
 	}
-	
+
 	public static function getSession($session="")
 	{
-		
+
 		self::sessionStart();
 		//session_decode($_SESSION);
 		$session_id = session_id();
-		
+
 		$session_db = framework::config("session_db");
 		$session_table = framework::config("session_table");
 		$user_agent = implode(";",getutility::userAgent());
-		
+
 		if((!empty($session_table)) && (!empty($session_db)))
 		{
 			$getSession = self::$model->get($session_table,array("session_id"=>$session_id),"object");
@@ -183,7 +186,7 @@ class getcommon {
 			{
 				if(!empty($getSession->$session))
 				{
-					
+
 					return $getSession->$session;
 				}
 				else
@@ -205,9 +208,9 @@ class getcommon {
 			}
 		}
 	}	
-	
-	
-	
+
+
+
 	/***** Document ******/
 	public static function readXml($file)
 	{
