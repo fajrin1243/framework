@@ -1,0 +1,176 @@
+@import url(http://fonts.googleapis.com/css?family=Oxygen:400,300);
+
+/* This css set the position of layout */
+
+body
+{
+	color : #888;
+	font-family: 'Oxygen', sans-serif;
+	line-height: 20px;
+}
+
+.text-left {	text-align :left;}
+.text-center {	text-align :center;}
+.text-right {	text-align :right;}
+.font-small { font-size : 11px;}
+.font-medium { font-size : 13px;}
+.font-large { font-size : 16px;}
+.font-xlarge { font-size : 18px;}
+
+.break-word {
+		word-wrap: break-word;
+}
+
+.overflow
+{
+	overflow:hidden;
+}
+
+/* For Floating Left */
+.left, .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col-13, .col-14, .col-15, .col-16, .col-17, .col-18, .col-19, .col-20 { float:left; }
+
+/* For Floating Left */
+.right { float:right; }
+
+/* For Absolute position */
+.absolute { position : absolute;	top : 0; /* default value */ left : 0; /* default value */ }
+
+/* For relative Position */
+.relative { 	position : relative; }
+
+/* For relative Position */
+.fixed { position : fixed; }
+
+/* grid style to colom */
+.col-1 { width : 5%;} .col-2 { width : 10%;} .col-3 { width : 15%; } .col-4 { width : 20%;} .col-5 { width : 25%;} .col-6 { width : 30%; } .col-7 { width : 35%;} .col-8 { width : 40%;} .col-9 { width : 45%;} .col-10 { width : 50%;} .col-11 { width : 55%;} .col-12 { width : 60%;} .col-13 { width : 65%;} .col-14 { width : 70%;} .col-15 { width : 75%;} .col-16 { width : 80%;} .col-17 { width : 85%;} .col-18 { width : 90%;} .col-19 { width : 95%;} .col-20 { width : 100%;}
+
+
+/* padding */
+.padtop-5, .pad-5 { padding-top : 5px; } .padtop-10, .pad-10 { padding-top : 10px; } .padtop-15, .pad-15 { padding-top : 15px; } .padtop-20, .pad-20 { padding-top : 20px; } .padtop-25, .pad-25 { padding-top : 25px; } .padtop-30, .pad-30 { padding-top : 30px; } .padtop-35, .pad-35 { padding-top : 35px; } .padtop-40, .pad-40 { padding-top : 40px; } .padtop-45, .pad-45 { padding-top : 45px; }  .padtop-50, .pad-50 { padding-top : 50px; } 
+.padright-5, .pad-5 { padding-right : 5px; } .padright-10, .pad-10 { padding-right : 10px; } .padright-15, .pad-15 { padding-right : 15px; } .padright-20, .pad-20 { padding-right : 20px; } .padright-25, .pad-25 { padding-right : 25px; } .padright-30, .pad-30 { padding-right : 30px; } .padright-35, .pad-35 { padding-right : 35px; } .padright-40, .pad-40 { padding-right : 40px; } .padright-45, .pad-45 { padding-right : 45px; }  .padright-50, .pad-50 { padding-right : 50px; } 
+.padbottom-5, .pad-5 { padding-bottom : 5px; } .padbottom-10, .pad-10 { padding-bottom : 10px; } .padbottom-15, .pad-15 { padding-bottom : 15px ; } .padbottom-20, .pad-20 { padding-bottom : 20px; } .padbottom-25, .pad-25 { padding-bottom : 25px; } .padbottom-30, .pad-30 { padding-bottom : 30px; } .padbottom-35, .pad-35 { padding-bottom : 35px; } .padbottom-40, .pad-40 { padding-bottom : 40px; } .padbottom-45, .pad-45 { padding-bottom : 45px; }  .padbottom-50, .pad-50 { padding-bottom : 50px; } 
+.padleft-5, .pad-5 { padding-left : 5px; } .padleft-10, .pad-10 { padding-left : 10px; } .padleft-15, .pad-15 { padding-left : 15px; } .padleft-20, .pad-20 { padding-left : 20px; } .padleft-25, .pad-25 { padding-left : 25px; } .padleft-30, .pad-30 { padding-left : 30px; } .padleft-35, .pad-35 { padding-left : 35px; } .padleft-40, .pad-40 { padding-left : 40px; } .padleft-45, .pad-45 { padding-left : 45px; }  .padleft-50, .pad-50 { padding-left : 50px; } 
+
+/* margin */
+.margtop-5, .marg-5 { margin-top : 5px; } .margtop-10, .marg-10 { margin-top : 10px; } .margtop-15, .marg-15 { margin-top : 15px; } .margtop-20, .marg-20 { margin-top : 20px; } .margtop-25, .marg-25 { margin-top : 25px; } .margtop-30, .marg-30 { margin-top : 30px; } .margtop-35, .marg-35 { margin-top : 35px; } .margtop-40, .marg-40 { margin-top : 40px; } .margtop-45, .marg-45 { margin-top : 45px; }  .margtop-50, .marg-50 { margin-top : 50px; } 
+.margright-5, .marg-5 { margin-right : 5px; } .margright-10, .marg-10 { margin-right : 10px; } .margright-15, .marg-15 { margin-right : 15px; } .margright-20, .marg-20 { margin-right : 20px; } .margright-25, .marg-25 { margin-right : 25px; } .margright-30, .marg-30 { margin-right : 30px; } .margright-35, .marg-35 { margin-right : 35px; } .margright-40, .marg-40 { margin-right : 40px; } .margright-45, .marg-45 { margin-right : 45px; }  .margright-50, .marg-50 { margin-right : 50px; } 
+.margbottom-5, .marg-5 { margin-bottom : 5px; } .margbottom-10, .marg-10 { margin-bottom : 10px; } .margbottom-15, .marg-15 { margin-bottom : 15px; } .margbottom-20, .marg-20 { margin-bottom : 20px; } .margbottom-25, .marg-25 { margin-bottom : 25px; } .margbottom-30, .marg-30 { margin-bottom : 30px; } .margbottom-35, .marg-35 { margin-bottom : 35px; } .margbottom-40, .marg-40 { margin-bottom : 40px; } .margbottom-45, .marg-45 { margin-bottom : 45px; }  .margbottom-50, .marg-50 { margin-bottom : 50px;} 
+.margleft-5, .marg-5 { margin-left : 5px; } .margleft-10, .marg-10 { margin-left : 10px; } .margleft-15, .marg-15 { margin-left : 15px; } .margleft-20, .marg-20 { margin-left : 20px; } .margleft-25, .marg-25 { margin-left : 25px; } .margleft-30, .marg-30 { margin-left : 30px; } .margleft-35, .marg-35 { margin-left : 35px; } .margleft-40, .marg-40 { margin-left : 40px; } .margleft-45, .marg-45 { margin-left : 45px; }  .margleft-50, .marg-50 { margin-left : 50px; } 
+
+/* Top, Right, Bottom, Left */
+.top-0 { top : 0; } .top-5 { top : 5px; } .top-10 { top : 10px; } .top-15 { top : 15px; } .top-20 { top : 20px; } .top-25 { top : 25px; } .top-30 { top : 30px; } .top-35 { top : 35px; } .top-40 { top : 40px; } .top-45 { top : 45px; }  .top-50 { top : 50px; } 
+.right-0 { right : 0; } .right-5 { right : 5px; } .right-10 { right : 10px; } .right-15 { right : 15px; } .right-20 { right : 20px; } .right-25 { right : 25px; } .right-30 { right : 30px; } .right-35 { right : 35px; } .right-40 { right : 40px; } .right-45 { right : 45px; }  .right-50 { right : 50px; } 
+.bottom-0 { bottom : 0; } .bottom-5 { bottom : 5px; } .bottom-10 { bottom : 10px; } .bottom-15 { bottom : 15px ; } .bottom-20 { bottom : 20px; } .bottom-25 { bottom : 25px; } .bottom-30 { bottom : 30px; } .bottom-35  { bottom : 35px; } .bottom-40 { bottom : 40px; } .bottom-45 { bottom : 45px; }  .bottom-50 { bottom : 50px; } 
+.left-0 { left : 0; } .left-5 { left : 5px; } .left-10 { left : 10px; } .left-15 { left : 15px; } .left-20 { left : 20px; } .left-25 { left : 25px; } .left-30 { left : 30px; } .left-35 { left : 35px; } .left-40  { left : 40px; } .left-45  { left : 45px; }  .left-50 { left : 50px; } 
+
+.z-index-0 { z-index : 0; } .z-index-10 { z-index : 10; } .z-index-100 { z-index : 100; } .z-index-1000 { z-index : 1000; }
+
+/* Width */
+.w-5 { width : 5%; } .w-10 { width : 10%; } .w-15 { width : 15%; } .w-20 { width : 20%; } .w-25 { width : 25%; } .w-30 { width : 30%; }  .w-35 { width : 35%; } .w-40 { width : 40%; } .w-45 { width : 45%; }  .w-50 { width : 50%; } .w-55 { width : 55%; } .w-60 { width : 60%; } .w-65 { width : 65%; } .w-70 { width : 70%; } .w-75 { width : 75%; } .w-80 { width : 80%; }  .w-85 { width : 85%; } .w-90 { width : 90%; } .w-95 { width : 95%; }  .w-100 { width : 100%; } 
+
+/* Height */
+.h-5 { height : 5%; } .h-10 { height : 10%; } .h-15 { height : 15%; } .h-20 { height : 20%; } .h-25 { height : 25%; } .h-30 { height : 30%; }  .h-35 { height : 35%; } .h-40 { height : 40%; } .h-45 { height : 45%; }  .h-50 { height : 50%; } .h-55 { height : 55%; } .h-60 { height : 60%; } .h-65 { height : 65%; } .h-70 { height : 70%; } .h-75 { height : 75%; } .h-80 { height : 80%; }  .h-85 { height : 85%; } .h-90 { height : 90%; } .h-95 { height : 95%; }  .h-100 { height : 100%; } 
+
+.invisible { display:none; }
+.inline { display:inline-block; }
+.clear { clear : both; }
+._debug { background : #f3f3f3; 	color : #000; border : 1px solid #fff; height : 50px; }
+.center { text-align :center;}
+.head { font-size : 30px; padding : 15px 0px; }
+
+/* fixed image */
+.wide-img img
+{
+	width : 100%;
+}
+
+.hidden
+{
+	visibility: hidden;
+}
+
+.fadecontent
+{
+}
+
+.nav .current
+{
+	display : none;
+}
+
+.bgshape-1
+{
+	padding : 10px 20px; 
+	background : #faab56;
+	border-radius : 8px;
+	border: 1px solid #f3f3f3;
+	width: 100px;
+	color : #fff;
+}
+
+/* Mobile Devices */
+@media screen and (max-width: 600px) {
+
+	#header
+	{
+		opacity : 1;
+	}
+	
+	
+	
+	.nav {
+		position: relative;
+		min-height: 40px;	
+		z-index : 1000;
+	}	
+	.nav ul {
+		 padding: 5%; 
+		position: absolute;
+		top: 0;
+		left: 0;
+		border: solid 1px #aaa;
+		/* background: #fff url(images/icon-menu.png) no-repeat 10px 11px; */
+		border-radius: 5px;
+		box-shadow: 0 1px 2px rgba(0,0,0,.3);
+	}
+	.nav li {
+		display: none; /* hide all <li> items */
+		margin: 0;
+	}
+	.nav .current {
+		display: block; /* show only current <li> item */
+	}
+	.nav a {
+		display: block;
+		/* padding: 5%; */
+		text-align: left;
+	}
+	.nav .current a {
+		background: none;
+		color: #666;
+	}
+
+	/* on nav hover */
+	.nav ul:hover {
+		background-image: none;
+	}
+	.nav ul:hover li {
+		display: block;
+		/* margin: 0 0 5px;*/
+	}
+	.nav ul:hover .current {
+		background: url(images/icon-check.png) no-repeat 10px 7px;
+	}
+
+	/* right nav */
+	.nav.right ul {
+		left: auto;
+		right: 0;
+	}
+
+	/* center nav */
+	.nav.center ul {
+		
+	}
+	
+}

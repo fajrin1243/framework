@@ -1,0 +1,70 @@
+sinc_framework beta
+
+	- framework(central class)
+	
+	configuration
+	- config
+	- route
+	- db
+	
+	system
+	- gethtml  		:	- form
+						- table
+						- meta
+	* We need get html just for html layout
+	
+	- getutility 	: 	- string
+						- request
+						- security
+						- session
+						- cookie
+						- valid
+						- connect
+						- language
+						- link
+						- mail
+						- file
+						- xml
+						- template
+						- info
+							- benchmark
+							- user_agent
+							- framework
+	* We need utility for anything utility funcition
+	
+	- getext		: 	- auth
+						- params
+						- wizard
+						- user_interfaces
+	* We need ext for extensions
+						
+		
+	each core have object
+	- Controllers
+	- Model alias db
+	- exceptions alias error
+	- get alias load
+	- set alias store
+	- app_route
+	- define
+	- alias
+	- helpers
+	- systems
+	
+	
+	1. we need to require configuration and create object
+	- index.php
+		- required framework
+		- create framework as object	
+		- required configuration, and route
+		- exception handler
+	
+	2. preparing core and routing
+		- routing
+		- make controller as super class
+		
+	3. including utility to active controller
+	
+	4. working controller 
+	
+	5. display view

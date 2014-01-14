@@ -1,0 +1,51 @@
+Documentation Section
+
+<P>Structure Folder</p>
+[App] Setiap file website atau aplikasi anda terletak disini<br />
+[config] Configurasi dapat anda lakukan disini terdapat 3 file, config, route<br />
+[include] Lettakan setiap file js, css, images, dan lainnya pada include<br />
+[system] File utama sinc framework
+[log] digunakan untuk file log
+[tmp] digunakan sebagai temporary
+
+<p>Getting Start</p>
+Sinc Framework adalah framework php yang menggunakan metode mvc, untuk memulai lakukan configurasi pada folder config,
+kemudian buatlah controller, model, ataupun view pada folder app. anda bebas membuat structure file anda sendiri. hanya saja
+gunakan extends di setiap class yang anda buat.<br />
+
+<b>Controller</b><br /> 
+class contoh_controller extends controller<br />
+
+<b>Model</b><br /> 
+class contoh_controller extends controller<br />
+
+untuk kedua diatas tambahkan<br />
+function __construct()<br />
+{<br />
+	parent::__construct();<br />
+}<br />
+
+<b>View</b><br /> 
+untuk menargetkan atau mengarahkan controller dengan view anda gunakan parent::view('file_view_anda');<br />
+
+
+<p>Library</p>
+
+Our library seperate to 3 :<br />
+- getcommon (hal yang biasa anda gunakan seperti session, dan function php pada umumnya)<br />
+- getutility (library yang anda bisa gunakan yang telah tersedia pada framework)<br />
+- gethtml (segala sesuatu yang dapat anda gunakan untuk menuliskan html seperti table, include css, js, image, url dan lainnya)<br />
+
+<p>Extension</p>
+
+Umumnya setiap extension yang terindex pada framework terletak pada [system/ext] dan dapat anda akses menggunakan<br />
+getext::ext('nama_extension');<br />
+Untuk menambahkan extension secara manual dapat anda letakkan pada folder include
+
+
+<style>
+	p
+	{
+		font-size : 28px; 
+	}
+</style>

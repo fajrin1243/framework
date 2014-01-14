@@ -1,0 +1,53 @@
+
+
+*
+{
+	margin: 0px;
+	padding : 0px;
+}
+
+body
+{
+	text-align : left;
+	
+
+	font-size : 13px;
+}
+
+.navigasi
+{
+	list-style : none;
+	
+}
+
+.navigasi li
+{
+	display : inline-block;
+	padding : 0px 20px;
+}
+
+.navigasi li a
+{
+	color: #fff;
+	text-decoration : none;
+}
+
+#header
+{
+	width : 100%;
+	background : #55d5da;
+	border-bottom : 2px solid #f3f3f3;
+	padding : 10px;
+	opacity : 0.8;
+	color : #fff;
+}
+
+#footer
+{
+	position : fixed;
+	bottom : 0px;
+	left : 0px;
+	background : #000;
+	color :#fff;
+	width : 100%;
+}
