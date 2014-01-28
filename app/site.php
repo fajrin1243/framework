@@ -13,7 +13,10 @@ class site extends controller{
 		echo "<br>";
 		foreach ($data as $key) {
 			echo $key->id;
+			echo "</br>";
 			echo $key->nama;
+			echo "</br>";
+			echo "<a href='site/delete?id=".$key->id."'>Delete</a>";
 			echo "</br>";
 		}
 	}
@@ -28,5 +31,17 @@ class site extends controller{
 
 		$model = parent::get("app/modelku");
 		$model->savedata("siswa",array('id' => $id, 'nama'=>$nama));
+	}
+
+	public function delete(){
+		/*$id = $_GET['id'];
+		parent::query("DELETE FROM siswa WHERE id='".$id."'");*/
+		$id = $_GET['id'];
+		$sql = "DELETE FROM siswa WHERE id='$id'";
+		$result = mysql_query($sql);
+	}
+
+	public function update(){
+		
 	}
 }

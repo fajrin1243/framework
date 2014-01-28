@@ -18,4 +18,7 @@ class modelku extends model{
 	function savedata($table,$post,$where=""){
 		return parent::store($table,$post,$where);
 	}
+	function deletedata($id){
+		parent::query("DELETE FROM table_name WHERE id='".$id."'");
+	}
 }
