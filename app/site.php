@@ -25,7 +25,8 @@ class site extends controller{
 	public function save(){
 		$id = $_POST['id'];
 		$nama = $_POST['nama'];
+
 		$model = parent::get("app/modelku");
-		$model->savedata("siswa",$id, $nama);
+		$model->savedata("siswa",array('id' => $id, 'nama'=>$nama));
 	}
 }
