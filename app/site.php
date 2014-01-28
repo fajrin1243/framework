@@ -7,6 +7,25 @@ class site extends controller{
 	}
 
 	public function index(){
-		parent::view('view/iniview.php');
+		$modelku = parent::get("app/modelku");
+		$data = $modelku->getdata("siswa");
+		print_r($data);
+		echo "<br>";
+		foreach ($data as $key) {
+			echo $key->id;
+			echo $key->nama;
+			echo "</br>";
+		}
+	}
+
+	public function create(){
+		echo parent::view("view/input");
+	}
+
+	public function save(){
+		$id = $_POST['id'];
+		$nama = $_POST['nama'];
+		$model = parent::get("app/modelku");
+		$model->savedata("siswa",$id, $nama);
 	}
 }

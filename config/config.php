@@ -32,8 +32,8 @@ Class config
 		/* Database Configuration */
 		$config['db_driver'] = "mysql";
 		$config['db_host'] = "localhost";
-		$config['db_user'] = "lampp";
-		$config['db_password'] = "tamanduta";
+		$config['db_user'] = "root";
+		$config['db_password'] = "";
 		$config['db'] = "opsipay";
 		$config['table_prefix'] = "";
 		

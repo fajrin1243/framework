@@ -1,4 +1,5 @@
 <?php
 
-echo "Hai Kevin";
-
+foreach ($data as $key) {
+	# code...
+}

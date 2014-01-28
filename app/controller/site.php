@@ -7,6 +7,6 @@ class site extends controller{
 	}
 
 	public function index(){
-
+		echo "Hai Kevin";
 	}
 }
