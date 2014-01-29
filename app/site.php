@@ -18,6 +18,8 @@ class site extends controller{
 			echo "</br>";
 			echo "<a href='site/delete?id=".$key->id."'>Delete</a>";
 			echo "</br>";
+			echo "<a href='site/update?id=".$key->id."'>Update</a>";
+			echo "</br>";
 		}
 	}
 
@@ -42,6 +44,15 @@ class site extends controller{
 	}
 
 	public function update(){
+		$id = $_GET['id'];
+		$modelku = parent::get("app/modelku");
+		$data = $modelku->getdata("siswa",array('id' => $id ));
+		echo parent::view("view/form_edit.php",$data);
+	}
+
+	public function do_update(){
+
 		
+
 	}
 }
